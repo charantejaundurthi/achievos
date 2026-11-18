@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Progress Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <section id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <div class="portal-logo">SP</div>
+
+            <h1>Student Portal</h1>
+            <p>Login to view your academic performance</p>
+
+            <form id="studentLoginForm">
+                <label for="studentNumber">Student ID</label>
+                <input
+                    type="text"
+                    id="studentNumber"
+                    placeholder="Enter Student ID"
+                    required
+                >
+
+                <label for="studentPassword">Password</label>
+                <input
+                    type="password"
+                    id="studentPassword"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+
+            <small>Student Academic Portal</small>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardLayout" class="dashboard-layout hide-section">
+
+        <!-- SIDEBAR -->
+        <aside class="side-menu">
+            <h2>Student<span>Portal</span></h2>
+
+            <nav>
+                <a href="#home" class="active">Dashboard</a>
+                <a href="#progress">My Progress</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#weak">Weak Areas</a>
+                <a href="#exams">Mock Exams</a>
+                <a href="#results">Results</a>
+            </nav>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="page-content">
+
+            <!-- HEADER -->
+            <header class="page-header" id="home">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Track your learning journey.</p>
+                </div>
+
+                <div class="student-profile">
+                    <div class="student-avatar">RK</div>
+
+                    <div>
+                        <strong>Ravi Kumar</strong>
+                        <small>Student ID: STU001</small>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SUMMARY CARDS -->
+            <section class="dashboard-cards">
+
+                <div class="progress-card card-blue">
+                    <p>Overall Progress</p>
+                    <h2>78%</h2>
+                    <span>Academic performance</span>
+                </div>
+
+                <div class="progress-card card-purple">
+                    <p>Exams Completed</p>
+                    <h2>12</h2>
+                    <span>Out of 15 exams</span>
+                </div>
+
+                <div class="progress-card card-green">
+                    <p>Average Score</p>
+                    <h2>82%</h2>
+                    <span>Across completed exams</span>
+                </div>
+
+                <div class="progress-card card-orange">
+                    <p>Upcoming Exams</p>
+                    <h2>03</h2>
+                    <span>Scheduled exams</span>
+                </div>
+
+            </section>
+
+            <!-- SUBJECT PROGRESS AND IMPROVEMENT AREAS -->
+            <section class="content-columns" id="progress">
+
+                <!-- SUBJECT PERFORMANCE -->
+                <div class="content-panel" id="subjects">
+
+                    <div class="panel-title">
+                        <div>
+                            <h2>Subject Performance</h2>
+                            <p>Your subject-wise academic progress</p>
+                        </div>
+                    </div>
+
+                    <div class="subject-progress">
+                        <div class="subject-name">
+                            <span>Mathematics</span>
+                            <strong>85%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="subject-progress">
+                        <div class="subject-name">
+                            <span>Physics</span>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:65%"></div>
+                        </div>
+                    </div>
+
+                    <div class="subject-progress">
+                        <div class="subject-name">
+                            <span>Chemistry</span>
+                            <strong>90%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="subject-progress">
+                        <div class="subject-name">
+                            <span>Computer Science</span>
+                            <strong>72%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:72%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- AREAS TO IMPROVE -->
+                <div class="content-panel" id="weak">
+
+                    <h2>Areas to Improve</h2>
+
+                    <p class="section-subtitle">
+                        Topics that need more attention
+                    </p>
+
+                    <div class="improvement-card">
+                        <span class="alert-icon">!</span>
+
+                        <div>
+                            <strong>Physics</strong>
+                            <p>Electricity and Magnetism</p>
+                            <small>Score: 45%</small>
+                        </div>
+                    </div>
+
+                    <div class="improvement-card">
+                        <span class="alert-icon">!</span>
+
+                        <div>
+                            <strong>Mathematics</strong>
+                            <p>Integration and Calculus</p>
+                            <small>Score: 55%</small>
+                        </div>
+                    </div>
+
+                    <div class="improvement-card">
+                        <span class="alert-icon">!</span>
+
+                        <div>
+                            <strong>Computer Science</strong>
+                            <p>Data Structures</p>
+                            <small>Score: 50%</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- UPCOMING EXAMS -->
+            <section class="content-panel exam-panel" id="exams">
+
+                <div class="panel-title">
+                    <div>
+                        <h2>Upcoming Mock Examinations</h2>
+                        <p>Check your upcoming exam schedule</p>
+                    </div>
+
+                    <span class="status-label">3 Upcoming</span>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Exam Name</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Mock Test 01</td>
+                                <td>Mathematics</td>
+                                <td>22 Nov 2026</td>
+                                <td>10:00 AM</td>
+                                <td>
+                                    <span class="exam-status">Scheduled</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mock Test 02</td>
+                                <td>Physics</td>
+                                <td>25 Nov 2026</td>
+                                <td>02:00 PM</td>
+                                <td>
+                                    <span class="exam-status">Scheduled</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mock Test 03</td>
+                                <td>Chemistry</td>
+                                <td>28 Nov 2026</td>
+                                <td>11:00 AM</td>
+                                <td>
+                                    <span class="exam-status">Scheduled</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- PREVIOUS EXAM RESULTS -->
+            <section class="content-panel exam-panel" id="results">
+
+                <div class="panel-title">
+                    <div>
+                        <h2>Previous Exam Results</h2>
+                        <p>Review your previous performance</p>
+                    </div>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Exam</th>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Mock Test 01</td>
+                                <td>Mathematics</td>
+                                <td>85/100</td>
+                                <td class="passed-result">Passed</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mock Test 02</td>
+                                <td>Physics</td>
+                                <td>65/100</td>
+                                <td class="passed-result">Passed</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mock Test 03</td>
+                                <td>Chemistry</td>
+                                <td>90/100</td>
+                                <td class="passed-result">Passed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="page-footer">
+                © 2026 Student Progress Portal
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
